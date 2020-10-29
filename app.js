@@ -168,8 +168,9 @@ app.use((err, req, res, next)=>{
     } 
     res.status(statusCode).render('error',{err})
 })
+const port = process.env.PORT || 5500
 
 //listener
-app.listen(5500,()=>{
-    console.log("sever started")
+app.listen(port,()=>{
+    console.log(`Severing on port ${port}`)
 })
