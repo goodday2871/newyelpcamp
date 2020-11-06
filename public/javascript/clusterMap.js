@@ -10,15 +10,6 @@ zoom: 3
 
 map.addControl(new mapboxgl.NavigationControl());
 
-map.addControl(
-    new mapboxgl.GeolocateControl({
-    positionOptions: {
-    enableHighAccuracy: true
-    },
-    trackUserLocation: true
-    })
-    );
-
 map.on('load', function () {
 // Add a new source from our GeoJSON data and
 // set the 'cluster' option to true. GL-JS will
@@ -115,7 +106,7 @@ zoom: zoom
 // the location of the feature, with
 // description HTML from its properties.
 map.on('click', 'unclustered-point', function (e) {
-    var text = e.features[0].properties.popUpMarkup
+    var {popUpMarkup} = e.features[0].properties.popUpMarkup
 var coordinates = e.features[0].geometry.coordinates.slice();
 
  
@@ -129,7 +120,7 @@ coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 new mapboxgl.Popup()
 .setLngLat(coordinates)
 .setHTML(
-    text
+    popUpMarkup
 )
 .addTo(map);
 });
