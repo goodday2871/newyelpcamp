@@ -1,6 +1,7 @@
 <% layout('layouts/boilerplate')%>
 <head>
 <link rel="stylesheet" href="/stylesheets/stars.css">
+
 </head>
     <div class="row mb-3">
         <div class="col-md-6">
@@ -47,7 +48,7 @@
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <div class="mb-3">
+            <div class="mb-3 mapDisplay">
             <div id='map'></div>
           </div>
             <% if(currentUser){%>
@@ -109,3 +110,9 @@
   var campground = <%-JSON.stringify(campground)%>
   </script>
 <script src="/javascript/showPageMap.js"></script>
+<script>
+  let mapDisplay = document.querySelector('.mapDisplay')
+  if(isIos===true){
+      mapDisplay.style.display = 'none'
+  }
+</script>

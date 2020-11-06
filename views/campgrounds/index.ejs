@@ -1,7 +1,9 @@
     <% layout('layouts/boilerplate')%>
+   
 
+    <div class="mapDisplay">
     <div id="cluster_map"></div>
-
+    </div>
     <h1 class="text-muted my-3">All campgrounds</h1>
     
     <% for(let campground of campgrounds){%>
@@ -30,3 +32,9 @@
         var campgrounds = {features:<%-JSON.stringify(campgrounds)%>}  
         </script>
 <script src="/javascript/clusterMap.js"></script>
+<script>
+    let mapDisplay = document.querySelector('.mapDisplay')
+    if(isIos===true){
+        mapDisplay.style.display = 'none'
+    }
+</script>
