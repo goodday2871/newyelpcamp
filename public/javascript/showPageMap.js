@@ -1,20 +1,24 @@
-
-mapboxgl.accessToken = mapToken
+  
+mapboxgl.accessToken = mapToken;
 var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11', 
-center: campground.geometry.coordinates,
-zoom: 10 
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
+    center: campground.geometry.coordinates, // starting position [lng, lat]
+    zoom: 10 // starting zoom
 });
+
 map.addControl(new mapboxgl.NavigationControl());
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> afb5ef225efa6199676b1a329f244d46f2a4ed62
 new mapboxgl.Marker()
-.setLngLat(campground.geometry.coordinates)
-.setPopup(
-    new mapboxgl.Popup({offset:30})
-    .setHTML(
-        `<h6>${campground.title}</h6>
-        <P>${campground.location}</p>`
+    .setLngLat(campground.geometry.coordinates)
+    .setPopup(
+        new mapboxgl.Popup({ offset: 25 })
+            .setHTML(
+                `<h3>${campground.title}</h3><p>${campground.location}</p>`
+            )
     )
-)
-.addTo(map)
+    .addTo(map)
