@@ -95,8 +95,8 @@ const styleSrcUrls = [
     "https://use.fontawesome.com",
 ];
 const connectSrcUrls = [
-    "https://*.tiles.mapbox.com",
     "https://api.mapbox.com",
+    "https://*.tiles.mapbox.com",
     "https://events.mapbox.com",
 ];
 const fontSrcUrls = [];
