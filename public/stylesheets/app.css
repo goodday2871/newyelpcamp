@@ -6,6 +6,9 @@
     width: 100%;
     height: 300px;
 }
-.navbar{
+nav{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     z-index: 999;
 }
