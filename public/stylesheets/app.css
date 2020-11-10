@@ -7,9 +7,8 @@
     height: 300px;
 }
 nav{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    z-index: 999;
-    overflow: visible;
+    -webkit-transform:translateZ(1px);
+    -moz-transform:translateZ(1px);
+    -o-transform:translateZ(1px);
+    transform:translateZ(1px);
 }
