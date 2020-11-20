@@ -13,3 +13,7 @@ nav{
     transform:translateZ(1px);
     overflow: visible;
 }
+.container-fluid{
+    transform:translateZ(1px);
+    overflow: visible;
+}
