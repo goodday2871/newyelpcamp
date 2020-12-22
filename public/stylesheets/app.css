@@ -17,3 +17,6 @@ nav{
     transform:translateZ(1px);
     overflow: visible;
 }
+.container{
+    margin-top: 60px;
+}
